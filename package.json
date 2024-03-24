@@ -1,0 +1,12 @@
+{
+  "name": "finanzas101bots",
+  "version": "1.0.0",
+  "description": "Chatbot especializado en finanzas",
+  "main": "JavaScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "De Caldas",
+  "license": "ISC"
+}
