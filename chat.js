@@ -47,21 +47,31 @@ function mostrarRespuestaChatbot(respuesta) {
   chatbox.appendChild(mensajeChatbot);
 }
 
-// Función para manejar las respuestas del chatbot
+// Función para manejar las respuestas del chatbot con hashtable
 function responder(input) {
-  switch (input.toLowerCase()) {
-    case 'hola':
-      return '¡Hola! ¿En qué puedo ayudarte?';
-    case "finanzas":
-      return "Finanzas 101";
-    case "":
-      return;
-    case "":
-      return;          ;
-    case 'adios':
-      return '¡Hasta luego!';
-    default:
-      return 'Lo siento, no entendí eso.';
+  const respuestas = {
+    "hola": "¡Hola! ¿En qué puedo ayudarte?",
+    "adios": "¡Hasta luego!",
+    "presupuesto": "Crear un presupuesto para controlar tus ingresos y gastos.",
+    "ahorro": "Ahorrar dinero y alcanzar tus metas financieras.",
+    "deudas": "Crear un plan para pagar tus deudas y mejorar tu salud financiera.",
+    "inversión": "Conocer los conceptos básicos de la inversión y a encontrar opciones de inversión adecuadas para ti.",
+    "créditos": "Sobre obtener un crédito y elegir la mejor opción para ti.",
+    "tarjetas de crédito": "Entender usar las tarjetas de crédito de manera responsable y evitar cargos e intereses innecesarios.",
+    "jubilación": "Planificar tu jubilación y ahorrar para tu futuro.",
+    "impuestos": "Declarar tus impuestos y reducir tu carga fiscal.",
+    "seguros": "Encontrar el seguro adecuado para ti y tu familia.",
+    "finanzas personales": "Mejorar tu salud financiera y alcanzar tus metas.",
+  };
+
+  // Convertir el input a minúsculas para una coincidencia precisa
+  const inputMinuscula = input.toLowerCase();
+
+  // Verificar si la entrada existe en el hashtable
+  if (respuestas.hasOwnProperty(inputMinuscula)) {
+    return respuestas[inputMinuscula];
+  } else {
+    return "Lo siento, no entendí eso.";
   }
 }
 
