@@ -1,13 +1,14 @@
 /* Estilos para el botón de abrir modal */
-#abrirModal {
-    display: inline-block;
-    background-color: #333;
-    color: white;
+.abrirModal-container{
+    background-color: #fff;
+    color: black;
     border: none;
     padding: 10px 20px;
+    margin-left: 7%;
     cursor: pointer;
     text-decoration: none;
     border-radius: 5px;
+    display: inline-block;
   }
   
   /* Estilos para la ventana modal oculta por defecto */

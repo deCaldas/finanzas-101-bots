@@ -139,5 +139,4 @@ function borrarConversacion() {
   });
 }
 
-// Llamamos a la función borrarConversacion para configurar los event listeners
 borrarConversacion();

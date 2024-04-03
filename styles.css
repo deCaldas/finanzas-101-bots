@@ -39,6 +39,8 @@ ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  float: right;
+  margin: 11px;
 }
 
 /* Estilos para la barra de navegación fija */
@@ -56,12 +58,12 @@ nav ul li a {
 /* Estilos para las secciones */
 .hero {
   background-color: #f4f4f4;
-  padding: 50px 0;
+  padding: 73px 0;
   text-align: center;
 }
 
 .hero h2 {
-  margin-top: 0;
+  margin-top: 7px;
 }
 
 .features {
@@ -69,8 +71,14 @@ nav ul li a {
   text-align: center;
 }
 
+.hero-acercaDe {
+  background-color: #f4f4f4;
+  padding: 73px 0;
+  text-align: center;
+}
+
 .feature {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 /* Estilos para la sección "Inicio" oculta por defecto  */
