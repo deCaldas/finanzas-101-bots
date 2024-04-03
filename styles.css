@@ -1,17 +1,105 @@
-/* Estilo para el botón de abrir modal */
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #333;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;  
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 11px;
+  font-size: 23px;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 17px;
+  margin: 0;
+}
+
+ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para la barra de navegación fija */
+.nav-fija {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-fija .container {
+  display: flex;
+  align-items: center;
+  height: 50px; /* Ajusta según el contenido de la barra de navegación */
+}
+
+/* Estilos para las secciones */
+.hero {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-top: 0;
+}
+
+.features {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+/* Estilos para la sección "Inicio" oculta por defecto  */
+.inicio {
+  padding-top: 23px;
+}
+
+/* Estilos para la sección "Acerca de" oculta por defecto  */
+.acercaDe {
+  display: none;
+}
+
+/* Estilos para el botón de abrir modal */
 #abrirModal {
-  background-color: #008CBA;
+  display: inline-block;
+  background-color: #333;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* Estilos para la ventana modal */
+/* Estilos para la ventana modal oculta por defecto */
 .modal {
-  display: none; /* Oculta la ventana modal por defecto */
-  position: fixed; /* Posición fija para que aparezca en el centro de la pantalla */
-  z-index: 1; /* Establece la ventana modal por encima de otros elementos */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -22,15 +110,15 @@
 /* Estilos para el contenido de la ventana modal */
 .modal-contenido {
   background-color: #fefefe;
-  margin: 15% auto; /* Centra la ventana modal verticalmente y la ajusta horizontalmente */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  height: 60%; /* Tamaño fijo del contenido de la ventana modal */
-  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  height: 60%;
+  overflow: hidden;
 }
 
-/* Estilo para el botón de cerrar */
+/* Estilos para el botón de cerrar */
 .cerrar {
   color: #aaa;
   float: right;
@@ -47,8 +135,8 @@
 
 /* Estilos para el contenedor del chat */
 .chat-container {
-  max-height: calc(100% - 100px); /* Altura máxima del chatbox */
-  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 
@@ -57,65 +145,50 @@
   padding: 10px;
   border-radius: 5px;
   background-color: #f9f9f9;
-  height: calc(100% - 100px); /* Altura máxima del chatbox */
-  overflow-y: auto; /* Habilitar el desplazamiento vertical */
+  height: calc(100% - 100px);
+  overflow-y: auto;
 }
 
 /* Estilos para el área de entrada de mensajes */
 .mensaje-input {
-  width: calc(100% - 80px); /* Ancho del área de entrada de mensajes */
+  width: calc(100% - 80px);
   margin-right: 10px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  position: fixed; /* Mantener fijo en la pantalla */
-  bottom: 20px; /* Espacio desde la parte inferior */
-  left: 20px; /* Espacio desde la izquierda */
+  position: fixed;
+  bottom: 23px;
+  left: 20px;
 }
 
 /* Estilos para el botón de enviar */
 .enviar-btn {
   background-color: #008CBA;
+  right: 150px;
+}
+
+/* Estilos para el botón de borrar */
+.borrar-btn {
+  background-color: #f44336;
+  right: 11px;
+}
+
+/* Estilos para los botones de enviar y borrar */
+.enviar-btn,
+.borrar-btn {
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  position: fixed; /* Mantener fijo en la pantalla */
-  bottom: 20px; /* Espacio desde la parte inferior */
-  right: 20px; /* Espacio desde la derecha */
+  position: fixed;
+  bottom: 2px;
 }
 
-/* 
-Estilo para el scroll-behavior para la futura página
-a {
-  display: inline-block;
-  width: 50px;
-  text-decoration: none;
-}
-nav,
-scroll-container {
-  display: block;
-  margin: 0 auto;
+/* Estilos para el pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
   text-align: center;
+  padding: 20px 0;
 }
-nav {
-  width: 339px;
-  padding: 5px;
-  border: 1px solid black;
-}
-scroll-container {
-  display: block;
-  width: 350px;
-  height: 200px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-scroll-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 5em;
-}
-*/
