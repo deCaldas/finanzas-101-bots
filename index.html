@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<title>Finanzas 101 Bots</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<button id="abrirModal">Abrir Finanzas 101 Bots</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finanzas 101 Bots</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- 
+		De la misma forma en que se oculta la ventana modal podríamos ocultar la paginación.
 
-		<div id="miModal" class="modal">
-			<div class="modal-contenido">
-				<span class="cerrar" id="cerrarModal"
-					>&times;</span
-				>
-				<h2>Finanzas 101 Bots</h2>
-				<div id="chatbox"></div>
-				<input
-					type="text"
-					id="mensajeInput"
-					placeholder="Escribe un mensaje..."
-				/>
-				<button id="enviarMensaje">Enviar</button>
-			</div>
-		</div>
+		Esta es la forma para construir nuestro "Finansas 101 Bots". 
+		Así paginar sin que tenga que recargar evitando el uso de Next.js 
+		y solo asegurar que su CSS muestre una página a la vez con el botón del chatbot omnipresente.
 
-		<script src="chat.js"></script>
-	</body>
+	<nav>
+		<a href="#page-1">1</a>
+		<a href="#page-2">2</a>
+		<a href="#page-3">3</a>
+	</nav>
+	<scroll-container>
+		<scroll-page id="page-1">1</scroll-page>
+		<scroll-page id="page-2">2</scroll-page>
+		<scroll-page id="page-3">3</scroll-page>
+	</scroll-container>
+	  -->
+    <button id="abrirModal">Abrir Finanzas 101 Bots</button>
+
+    <div id="miModal" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <h2>Finanzas 101 Bots</h2>
+        <div id="chatContainer" class="chat-container">
+          <div id="chatbox" class="chatbox"></div>
+        </div>
+        <input
+          type="text"
+          id="mensajeInput"
+          class="mensaje-input"
+          placeholder="Escribe un mensaje..."
+        />
+        <button id="enviarMensaje" class="enviar-btn">Enviar</button>
+      </div>
+    </div>
+
+    <script src="chat.js"></script>
+  </body>
 </html>
