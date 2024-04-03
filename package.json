@@ -1,12 +1,18 @@
 {
   "name": "finanzas101bots",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Chatbot especializado en finanzas",
-  "main": "JavaScript.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "De Caldas",
+  "keywords": [
+    "Presupuesto",
+    "Ahorro",
+    "Deudas",
+    "Inversión",
+    "Créditos",
+    "Jubilación",
+    "Impuestos",
+    "Seguros",
+    "Finanzas"
+  ],
+  "author": "Diego Whiskey",
   "license": "ISC"
 }
